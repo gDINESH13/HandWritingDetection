@@ -23,7 +23,6 @@ def predict():
         imgToArr = imgToArr.reshape(1,28,28,1)
         pred = model.predict([imgToArr])
         print(pred)
-
         y_pred = np.argmax(pred,axis=1)
         print("The image is "+str(y_pred))
         return redirect('/')
